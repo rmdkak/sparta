@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: #f5f4f0;
+}
+.container {
+  display: grid;
+  grid-template:
+    ". . ." 25px
+    "header header header" 185px
+    ". . ." 30px
+    "sidebar-a main sidebar-b" auto
+    ". . ." 30px
+    / 17fr minmax(0, 66fr) 17fr;
+  padding: 0 30px;
+}
+
+.header {
+  grid-area: header;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 3px black;
+  border-bottom: solid 3px black;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+  grid-template-columns: 1fr;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 2px gray;
+  border-bottom: solid 2px gray;
+  padding-top: 6px;
+  padding-bottom: 3px;
+}
+.glogo {
+  width: 120px;
+  height: 110px;
+  border-radius: 60px;
+}
+.titleimg {
+  width: 600px;
+  height: 110px;
+}
+.tlogo {
+  width: 120px;
+  height: 110px;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  border-top: solid 3px black;
+  padding-top: 6px;
+  margin-bottom: 7px;
+}
+.search {
+  width: 280px;
+  height: 25px;
+  padding: 5px 20px;
+  border-radius: 40px;
+  font-size: 15px;
+}
+.main {
+  grid-area: main;
+}
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+}
+.sidebar-a {
+  border-right: solid 3px black;
+  margin-right: 10px;
+  grid-area: sidebar-a;
+}
+.sidebar-b {
+  border-left: solid 3px black;
+  margin-left: 10px;
+  grid-area: sidebar-b;
+}
+.movie-card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  justify-self: center;
+  background-color: #fffaf4;
+  cursor: pointer;
+  user-select: none;
+}
+.movie-card2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  justify-self: center;
+  background-color: #fffaf4;
+  cursor: pointer;
+  user-select: none;
+}
+
+.movie-card img {
+  width: 100%;
+}
