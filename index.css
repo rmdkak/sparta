@@ -4,6 +4,7 @@
 body {
   background-color: #f5f4f0;
 }
+/* display:grid 부모 요소 */
 .container {
   display: grid;
   grid-template:
@@ -15,7 +16,7 @@ body {
     / 17fr minmax(0, 66fr) 17fr;
   padding: 0 30px;
 }
-
+/* 헤더 부분 */
 .header {
   grid-area: header;
   justify-content: center;
@@ -56,12 +57,25 @@ body {
   margin-bottom: 7px;
 }
 .search {
-  width: 280px;
+  width: 385px;
   height: 25px;
   padding: 5px 20px;
   border-radius: 40px;
   font-size: 15px;
 }
+.btn {
+  height: 36px;
+  width: 52px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 15px;
+  background-image: "/static/btnicon.png";
+}
+.btn:hover {
+  border: solid 3px black;
+}
+/* 메인 부분 */
 .main {
   grid-area: main;
 }
@@ -70,16 +84,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
-}
-.sidebar-a {
-  border-right: solid 3px black;
-  margin-right: 10px;
-  grid-area: sidebar-a;
-}
-.sidebar-b {
-  border-left: solid 3px black;
-  margin-left: 10px;
-  grid-area: sidebar-b;
 }
 .movie-card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
@@ -91,17 +95,13 @@ body {
   cursor: pointer;
   user-select: none;
 }
-.movie-card2 {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-  margin: 20px;
-  padding: 20px;
-  width: 300px;
-  justify-self: center;
-  background-color: #fffaf4;
-  cursor: pointer;
-  user-select: none;
-}
-
 .movie-card img {
   width: 100%;
+}
+/* 추가 기능 구현 부분 */
+.sidebar-a {
+  grid-area: sidebar-a;
+}
+.sidebar-b {
+  grid-area: sidebar-b;
 }
