@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: #f5f4f0;
@@ -33,8 +34,8 @@ body {
   align-items: center;
   border-top: solid 2px gray;
   border-bottom: solid 2px gray;
-  padding-top: 6px;
-  padding-bottom: 3px;
+  padding-top: 4px;
+  margin-top: -2px;
 }
 .glogo {
   width: 120px;
@@ -44,6 +45,7 @@ body {
 .titleimg {
   width: 600px;
   height: 110px;
+  cursor: pointer;
 }
 .tlogo {
   width: 120px;
@@ -57,8 +59,8 @@ body {
   margin-bottom: 7px;
 }
 .search {
-  width: 385px;
-  height: 25px;
+  width: 430px;
+  height: 35px;
   padding: 5px 20px;
   border-radius: 40px;
   font-size: 15px;
@@ -73,7 +75,8 @@ body {
   background-image: "/static/btnicon.png";
 }
 .btn:hover {
-  border: solid 3px black;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  font-weight: bold;
 }
 /* 메인 부분 */
 .main {
@@ -81,9 +84,23 @@ body {
 }
 .card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
+}
+@media screen and (min-width: 500px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .movie-card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
@@ -101,7 +118,19 @@ body {
 /* 추가 기능 구현 부분 */
 .sidebar-a {
   grid-area: sidebar-a;
+  border-right: solid 3px black;
+  margin-right: 10px;
 }
 .sidebar-b {
   grid-area: sidebar-b;
+  border-left: solid 3px black;
+  margin-left: 10px;
+}
+.top {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  margin: 20px 20px 20px 20px;
 }

@@ -10,40 +10,52 @@
 
   <body>
     <div class="container">
-      <!-- 헤더 부분 -->
+      <!-- 헤더 -->
       <header class="header">
-        <!-- 타이틀 로고 부분 -->
+        <!-- 타이틀 로고 -->
         <div class="title">
           <!-- 블로그, 깃허브,로고 a링크로 각자 이동 가능 -->
           <a href="https://huu-oong.tistory.com/"
             ><img class="tlogo" src="/static/tstory.png"
           /></a>
-          <a href="/"><img class="titleimg" src="/static/title.png" /></a>
+          <img
+            class="titleimg"
+            src="/static/title.png"
+            onclick="window.location.reload()"
+          />
           <a href="https://github.com/rmdkak/sparta"
             ><img class="glogo" src="/static/githublogo.png"
           /></a>
         </div>
-        <!-- 검색창 부분 -->
+        <!-- 검색창 -->
         <div class="search-bar">
           <form onsubmit="return false;">
             <input
               type="text"
               class="search"
               id="findMovie"
+              onkeypress="if( event.keyCode == 13 ){myFunction();}"
               placeholder="원하시는 영화를 입력 후 ENTER/버튼을 눌러 검색하세요."
+              autofocus
             />
             <button class="btn" onclick="myFunction()">검색</button>
           </form>
         </div>
       </header>
-      <!-- 메인 부분 -->
+      <!-- 메인 -->
       <div class="main">
-        <!-- 카드 리스트 scrip에서 템플릿 리터럴로 가져옴 -->
+        <!-- 카드 리스트 script에서 템플릿 리터럴로 가져옴 -->
         <section class="card-list" id="list"></section>
       </div>
       <!-- 추가 기능 구현 공간 -->
       <div class="sidebar-a"></div>
-      <div class="sidebar-b"></div>
+      <div class="sidebar-b">
+        <img
+          class="top"
+          src="/static/top.png"
+          onclick="window.scrollTo(0,0);"
+        />
+      </div>
     </div>
   </body>
   <script src="/index.js"></script>
